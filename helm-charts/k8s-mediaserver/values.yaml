@@ -122,6 +122,7 @@ jackett:
 
 transmission:
   enabled: true
+  podAnnotations: {}
   container:
     image: docker.io/linuxserver/transmission
     nodeSelector: {}
