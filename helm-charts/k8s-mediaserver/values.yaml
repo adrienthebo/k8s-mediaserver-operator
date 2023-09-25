@@ -236,6 +236,7 @@ plex:
   enabled: true
   claim: "CHANGEME"
   replicaCount: 1
+  podAnnotations: {}
   container:
     image: docker.io/linuxserver/plex
     nodeSelector: {}

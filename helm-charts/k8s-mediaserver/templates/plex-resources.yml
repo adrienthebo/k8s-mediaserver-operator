@@ -27,6 +27,11 @@ spec:
       labels:
         {{- include "k8s-mediaserver.selectorLabels" . | nindent 8 }}
         app: plex
+      {{- with .Values.plex.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+
     spec:
       volumes:
         {{- if not .Values.general.storage.customVolume }}
